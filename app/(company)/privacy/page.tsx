@@ -14,10 +14,18 @@ const style = {
     },
 };
 
-const Section = ({title, children}) => (<>
-        <h2 style={style.heading}>{title}</h2>
-        {children}
-    </>);
+type SectionProps = {
+  title: string;
+  children: React.ReactNode;
+};
+
+const Section: React.FC<SectionProps> = ({ title, children }) => (
+  <>
+    <h2 style={style.heading}>{title}</h2>
+    {children}
+  </>
+);
+
 export default function Privacy() {
   const termsStyle = {
         maxWidth: '800px',
