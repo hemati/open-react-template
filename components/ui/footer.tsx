@@ -71,9 +71,9 @@ export default function Footer() {
                   <li className="mb-1">
                     <Link href="/privacy" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Privacy Policy</Link>
                   </li>
-                  {/*<li className="mb-1">*/}
-                  {/*  <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Labore et dolore</Link>*/}
-                  {/*</li>*/}
+                  <li className="mb-1">
+                    <Link href="/imprint" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Imprint</Link>
+                  </li>
                   {/*<li className="mb-1">*/}
                   {/*  <Link href="/" className="text-gray-400 hover:text-gray-100 transition duration-150 ease-in-out">Consectetur adipiscing</Link>*/}
                   {/*</li>*/}
