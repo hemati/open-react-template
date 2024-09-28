@@ -52,7 +52,7 @@ export default function Privacy() {
             </Head>
         <div style={termsStyle}>
             <h1 style={headingStyle}>Privacy Policy</h1>
-            <p>Last updated: 14th May 2024</p>
+            <p>Last updated: 25th Aug 2024</p>
 
             <Section title="Introduction">
                 <p>Welcome to Appcoholic.com. We are committed to protecting your privacy.
@@ -65,7 +65,7 @@ export default function Privacy() {
                 <ul>
                     <li>**Firebase Firestore**: We use Firestore to store data relevant to our app's functionality. This may include user-generated content and preferences.</li>
                     <li>**Google Analytics**: We use Google Analytics to collect information about how you use our website and apps. This includes information about your device, browsing actions, and usage patterns.</li>
-                    <li>**ChatGPT API**: Our virtual assistant uses the ChatGPT API to answer questions about the Bible. The interactions are processed by the API.</li>
+                    <li>**ChatGPT API**: Our virtual assistant uses the ChatGPT API to answer questions about the Quran. The interactions are processed by the API.</li>
                 </ul>
                 <p>We ensure that any data collected is used in compliance with applicable privacy laws and regulations.</p>
             </Section>

@@ -1,0 +1,15 @@
+[Unit]
+Description=Langflux landingpage
+OnFailure=notify@%n___w.hemati@gmail.com.service
+
+[Service]
+ExecStart=/home/wahed/.nvm/versions/node/v18.17.0/bin/yarn start
+Restart=always
+User=wahed
+# Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
+Group=wahed
+WorkingDirectory=/home/wahed/git/open-react-template
+Environment=PATH=/usr/bin:/usr/local/bin:/home/wahed/.nvm/versions/node/v18.17.0/bin/
+
+[Install]
+WantedBy=multi-user.target
