@@ -65,7 +65,7 @@ export default function Privacy() {
       </Head>
       <div style={termsStyle}>
         <h1 style={headingStyle}>Privacy Policy</h1>
-        <p>Last updated: 31 Aug 2025</p>
+        <p>Last updated: 28 Aug 2025</p>
 
         <Section title="Introduction">
           <p>
