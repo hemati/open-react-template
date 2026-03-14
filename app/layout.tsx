@@ -4,6 +4,8 @@ import { Inter, Architects_Daughter } from 'next/font/google'
 
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
+import { CookieConsentBanner } from '@/components/cookie-consent'
+import { AnalyticsProvider } from '@/components/analytics-provider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,6 +37,8 @@ export default function RootLayout({
           <Header />
           {children}
           {/*<Banner />*/}
+          <AnalyticsProvider />
+          <CookieConsentBanner />
         </div>
       </body>
     </html>

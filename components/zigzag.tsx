@@ -3,6 +3,7 @@ import Image from 'next/image'
 import FeatImage01 from '@/public/images/craftcommand.png'
 import FeatImage02 from '@/public/images/bible.png'
 import FeatImage03 from '@/public/images/quran.png'
+import { TrackedLink } from '@/components/tracked-link'
 
 export default function Zigzag() {
   return (
@@ -73,10 +74,10 @@ export default function Zigzag() {
                     </li>
                   </ul>
                   <div className="mt-6">
-                    <a href='https://play.google.com/store/apps/details?id=com.appcoholic.quran'><img
+                    <TrackedLink href='https://play.google.com/store/apps/details?id=com.appcoholic.quran' ctaName="google_play_quran"><img
                         alt='Get it on Google Play'
                         src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
-                        style={{width: '200px'}}/></a>
+                        style={{width: '200px'}}/></TrackedLink>
                   </div>
                   <div className="mt-4">
                     <a href="/quran/privacy" className="text-purple-600 hover:underline">Privacy</a>
@@ -133,10 +134,10 @@ export default function Zigzag() {
                     </li>
                   </ul>
                   <div className="mt-6">
-                    <a href='https://play.google.com/store/apps/details?id=com.appcoholic.bible&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                    <TrackedLink href='https://play.google.com/store/apps/details?id=com.appcoholic.bible&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' ctaName="google_play_bible"><img
                         alt='Get it on Google Play'
                         src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
-                        style={{width: '200px'}}/></a>
+                        style={{width: '200px'}}/></TrackedLink>
                   </div>
                   <div className="mt-4">
                     <a href="/bible/privacy" className="text-purple-600 hover:underline">Privacy</a>
@@ -196,10 +197,10 @@ export default function Zigzag() {
                     </li>
                   </ul>
                   <div className="mt-6">
-                    <a href='https://play.google.com/store/apps/details?id=com.appcoholic.craftcommand&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                    <TrackedLink href='https://play.google.com/store/apps/details?id=com.appcoholic.craftcommand&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' ctaName="google_play_craftcommand"><img
                         alt='Get it on Google Play'
                         src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'
-                        style={{width: '200px'}}/></a>
+                        style={{width: '200px'}}/></TrackedLink>
                   </div>
                   <div className="mt-4">
                     <a href="/craftcommand/privacy" className="text-purple-600 hover:underline">Privacy</a>
