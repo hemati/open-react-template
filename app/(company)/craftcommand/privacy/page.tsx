@@ -52,19 +52,20 @@ export default function Privacy() {
             </Head>
             <div style={termsStyle}>
                 <h1 style={headingStyle}>Privacy Policy</h1>
-                <p>Last updated: 17th Nov. 2023</p>
+                <p>Last updated: March 2026</p>
 
                 <Section title="Introduction">
-                    <p>Welcome to Appcoholic.com. We are committed to protecting your privacy.
-                        This privacy policy explains our data practices and the choices you can make about the way
-                        your information is used at our website and apps.</p>
+                    <p>Welcome to Appcoholic.com. This privacy policy applies to the CraftCommand app.
+                        We are committed to protecting your privacy and explain below what data we collect and how we use it.</p>
                 </Section>
 
                 <Section title="1. Data Collection and Use">
-                    <p>We do not collect or store any personal data about our users. Our Website and Apps (CraftCommand)
-                        operates without any data storage, and we have no servers that retain user information.
-                        There is no collection, use, sharing, or storage of personal or non-personal data from our
-                        users.</p>
+                    <p>CraftCommand does not collect or store any personal data. The app operates without user accounts and does not require any personal information to function.</p>
+                    <p>Our website (appcoholic.com) uses Google Analytics 4 with Consent Mode v2 for anonymous usage analytics. No data is collected until you give consent via the cookie banner.</p>
+                </Section>
+
+                <Section title="2. Contact">
+                    <p>If you have questions about this policy, contact us at <a href="mailto:support@appcoholic.com" style={linkStyle}>support@appcoholic.com</a>.</p>
                 </Section>
             </div>
         </>);
