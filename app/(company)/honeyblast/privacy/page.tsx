@@ -61,7 +61,7 @@ export default function HoneyBlastPrivacy() {
   return (
     <div style={style.container}>
       <h1 style={style.title}>Honey Blast Privacy Policy</h1>
-      <p>Last updated: 11 November 2026</p>
+      <p>Last updated: 12 November 2026</p>
 
       <p>
         This policy explains which personal data is processed when you use the Android game{' '}
@@ -103,13 +103,18 @@ export default function HoneyBlastPrivacy() {
             In the EEA, the United Kingdom and Switzerland, ads use your personal data for personalisation only if you
             agree. You can change your choice at any time in the game.
           </li>
+          <li>
+            With your consent, we measure how the game is used with Google Analytics for Firebase. If the game
+            crashes, a crash report is sent to Firebase Crashlytics so that we can fix the error.
+          </li>
         </ul>
       </Section>
 
       <Section title="3. Data that stays on your device">
         <p>
           The game stores its state on your device: the current board, scores, best score, the number of games played,
-          theme, sound and vibration settings, and whether a banner has already been shown in the current game. To
+          theme, sound and vibration settings, whether a banner has already been shown in the current game, and when
+          the game last asked for a rating. To
           decide when a banner may appear, the game also reads the installation date of the app and the device&apos;s
           memory figures from Android. This information is evaluated on the device and is not sent to us. It is deleted
           when you clear the app data or uninstall the app.
@@ -169,14 +174,35 @@ export default function HoneyBlastPrivacy() {
         </p>
       </Section>
 
-      <Section title="6. App configuration (Firebase Remote Config)">
+      <Section title="6. Firebase (configuration, usage statistics, crash reports)">
         <p>
-          The game loads configuration values, for example when and for whom banners are shown, from{' '}
+          The game uses the following services of Firebase, a platform of Google (Google Ireland Limited, Gordon House,
+          Barrow Street, Dublin 4, Ireland).
+        </p>
+        <p>
+          <strong>Remote Config.</strong> The game loads configuration values, for example when and for whom banners are shown, from{' '}
           <strong>Firebase Remote Config</strong>, a service of Google. For this, a Firebase installation ID, the app
           version, the device language and country, and the IP address are transmitted to Google. We use this to
           operate and adjust the game without an app update (Art. 6(1)(f) GDPR; storing the installation ID on the
           device is strictly necessary for this service, § 25(2) No. 2 TDDDG). More information:{' '}
           <ExternalLink href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</ExternalLink>.
+        </p>
+        <p>
+          <strong>Google Analytics for Firebase.</strong> If you agree, the game sends usage statistics to Google: an
+          app instance ID, device and operating system information (model, Android version, language, screen size),
+          the app version, an approximate location derived from the IP address (country, region), and how the game is
+          used (for example first launch, sessions, engagement time and the ads shown). We use these statistics to
+          understand and improve the game and its advertising. Legal basis is your consent (Art. 6(1)(a) GDPR,
+          § 25(1) TDDDG); without it, Analytics stores no identifier and sends no usage statistics that identify you
+          (Google consent mode). You can withdraw your consent at any time via <strong>Settings → Privacy
+          settings</strong>. Where no consent is required by law, we rely on our legitimate interest in improving the
+          game (Art. 6(1)(f) GDPR). Google keeps the event data for 2 months.
+        </p>
+        <p>
+          <strong>Crashlytics.</strong> If the game crashes, a crash report is sent to Google: the error details (stack
+          trace), device model, Android version, app version, free memory and storage, the time of the crash and a
+          Crashlytics installation ID. We use these reports only to find and fix errors, based on our legitimate
+          interest in a stable game (Art. 6(1)(f) GDPR). Crash reports are deleted after 90 days.
         </p>
       </Section>
 
@@ -186,12 +212,17 @@ export default function HoneyBlastPrivacy() {
           if you allow it in your device settings, crash and usage statistics, under its own responsibility. We receive
           only aggregated, non-identifying reports from Google Play.
         </p>
+        <p>
+          After some games with a new best score, the game may show Google Play&apos;s rating card. Your rating and
+          review are handled by Google Play; the game does not learn whether or how you rated.
+        </p>
       </Section>
 
       <Section title="8. Device permissions">
         <ul style={style.list}>
           <li>
-            <strong>Internet and network state</strong>: to load ads and the app configuration.
+            <strong>Internet and network state</strong>: to load ads and the app configuration and to send usage
+            statistics and crash reports.
           </li>
           <li>
             <strong>Advertising ID</strong> (<code>AD_ID</code>): used by the ad SDKs as described in section 4.
