@@ -61,7 +61,7 @@ export default function HoneyBlastPrivacy() {
   return (
     <div style={style.container}>
       <h1 style={style.title}>Honey Blast Privacy Policy</h1>
-      <p>Last updated: 12 November 2026</p>
+      <p>Last updated: 15 November 2026</p>
 
       <p>
         This policy explains which personal data is processed when you use the Android game{' '}
@@ -96,8 +96,9 @@ export default function HoneyBlastPrivacy() {
             run servers that receive it.
           </li>
           <li>
-            The game is free and financed by banner ads. Google AdMob and its mediation partners deliver these ads and
-            process device data for that purpose, as described below.
+            The game is free and financed by ads: a banner during a round, full-screen ads between some games and
+            reward videos you can choose to watch for a second chance. Google AdMob and its mediation partners deliver
+            these ads and process device data for that purpose, as described below.
           </li>
           <li>
             In the EEA, the United Kingdom and Switzerland, ads use your personal data for personalisation only if you
@@ -107,23 +108,29 @@ export default function HoneyBlastPrivacy() {
             With your consent, we measure how the game is used with Google Analytics for Firebase. If the game
             crashes, a crash report is sent to Firebase Crashlytics so that we can fix the error.
           </li>
+          <li>
+            If you allow notifications, the game reminds you now and then to play. These reminders are planned on your
+            device; no data is sent for them.
+          </li>
         </ul>
       </Section>
 
       <Section title="3. Data that stays on your device">
         <p>
           The game stores its state on your device: the current board, scores, best score, the number of games played,
-          theme, sound and vibration settings, whether a banner has already been shown in the current game, and when
-          the game last asked for a rating. To
-          decide when a banner may appear, the game also reads the installation date of the app and the device&apos;s
-          memory figures from Android. This information is evaluated on the device and is not sent to us. It is deleted
-          when you clear the app data or uninstall the app.
+          your adventure progress, theme, sound and vibration settings, how ads and second chances were offered in
+          recent games, when the game last asked for a rating and which reminders are planned. To decide when an ad or a
+          second chance may appear, the game also reads the installation date of the app, how long you play and the
+          device&apos;s memory figures from Android. This information is evaluated on the device and is not sent to us.
+          It is deleted when you clear the app data or uninstall the app.
         </p>
       </Section>
 
       <Section title="4. Advertising (Google AdMob and mediation partners)">
         <p>
-          During a round, Honey Blast shows a banner ad at the bottom of the screen. Ads are requested through{' '}
+          During a round, Honey Blast shows a banner ad at the bottom of the screen. Between some games it shows a
+          full-screen ad. When you run out of space, it may offer a second chance in exchange for watching a reward
+          video; watching it is up to you. Ads are requested through{' '}
           <strong>Google AdMob</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland). AdMob
           runs an auction in which the following partners can bid for the ad space and, if they win, deliver the ad:
         </p>
@@ -180,7 +187,8 @@ export default function HoneyBlastPrivacy() {
           Barrow Street, Dublin 4, Ireland).
         </p>
         <p>
-          <strong>Remote Config.</strong> The game loads configuration values, for example when and for whom banners are shown, from{' '}
+          <strong>Remote Config.</strong> The game loads configuration values, for example when and for whom ads and
+          second chances are shown, from{' '}
           <strong>Firebase Remote Config</strong>, a service of Google. For this, a Firebase installation ID, the app
           version, the device language and country, and the IP address are transmitted to Google. We use this to
           operate and adjust the game without an app update (Art. 6(1)(f) GDPR; storing the installation ID on the
@@ -229,6 +237,16 @@ export default function HoneyBlastPrivacy() {
           </li>
           <li>
             <strong>Vibration</strong>: for haptic feedback; you can turn it off in the game settings.
+          </li>
+          <li>
+            <strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): for local reminders, for example about an
+            unfinished round, once a few days after your first games, and for returning players a lunchtime reminder
+            that opens the game with a short ad-free break. Android asks you first; you can turn them off at any time
+            in the Android settings for the app.
+          </li>
+          <li>
+            <strong>Run at startup</strong> (<code>RECEIVE_BOOT_COMPLETED</code>): to keep planned reminders after the
+            device restarts.
           </li>
         </ul>
       </Section>
