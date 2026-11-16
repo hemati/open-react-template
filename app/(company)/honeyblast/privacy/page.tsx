@@ -61,7 +61,7 @@ export default function HoneyBlastPrivacy() {
   return (
     <div style={style.container}>
       <h1 style={style.title}>Honey Blast Privacy Policy</h1>
-      <p>Last updated: 15 November 2026</p>
+      <p>Last updated: 16 November 2026</p>
 
       <p>
         This policy explains which personal data is processed when you use the Android game{' '}
@@ -144,6 +144,14 @@ export default function HoneyBlastPrivacy() {
             <ExternalLink href="https://unity.com/legal/game-player-and-app-user-privacy-policy">
               privacy policy
             </ExternalLink>
+          </li>
+          <li>
+            <strong>InMobi</strong> (InMobi Pte. Ltd.) –{' '}
+            <ExternalLink href="https://advertising.inmobi.com/privacy-policy-for-eea">privacy policy</ExternalLink>
+          </li>
+          <li>
+            <strong>Mintegral</strong> –{' '}
+            <ExternalLink href="https://www.mintegral.com/en/privacy">privacy policy</ExternalLink>
           </li>
         </ul>
         <p>
@@ -253,9 +261,9 @@ export default function HoneyBlastPrivacy() {
 
       <Section title="9. Transfers outside the EU">
         <p>
-          Google, Meta and Unity may process data in the United States and other countries. Where this happens, the
-          providers rely on the EU–U.S. Data Privacy Framework or on the European Commission&apos;s Standard
-          Contractual Clauses.
+          Google, Meta, Unity, InMobi and Mintegral may process data in the United States and other countries outside
+          the EU. Where this happens, the providers rely on an adequacy decision of the European Commission, on the
+          EU–U.S. Data Privacy Framework or on the European Commission&apos;s Standard Contractual Clauses.
         </p>
       </Section>
 
