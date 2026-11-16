@@ -155,6 +155,11 @@ export default function HoneyBlastPrivacy() {
           </li>
         </ul>
         <p>
+          In addition, ad exchanges that bid through AdMob without their own SDK in the app, such as Index Exchange
+          and Magnite, can take part in this auction. They receive the information in the ad request from Google and
+          pass it on to their advertisers.
+        </p>
+        <p>
           For this, the ad SDKs in the app collect and transmit to these providers in particular: the advertising ID of
           your device (where available), IP address and an approximate location derived from it, device and operating
           system information (model, Android version, language, screen size), information about the app, your consent
@@ -261,8 +266,8 @@ export default function HoneyBlastPrivacy() {
 
       <Section title="9. Transfers outside the EU">
         <p>
-          Google, Meta, Unity, InMobi and Mintegral may process data in the United States and other countries outside
-          the EU. Where this happens, the providers rely on an adequacy decision of the European Commission, on the
+          Google, Meta, Unity, InMobi, Mintegral and the ad exchanges named in section 4 may process data in the
+          United States and other countries outside the EU. Where this happens, the providers rely on an adequacy decision of the European Commission, on the
           EU–U.S. Data Privacy Framework or on the European Commission&apos;s Standard Contractual Clauses.
         </p>
       </Section>
