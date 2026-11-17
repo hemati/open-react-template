@@ -708,3 +708,5 @@ smartadserver.com, 4284, RESELLER
 rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
 smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
 smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
+pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
+openx.com, 660441900, DIRECT, 6a698e2ec38604c6
