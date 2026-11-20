@@ -18,7 +18,8 @@ export async function sendHbEvent(
     client_id: `${Math.floor(Math.random() * 2_147_483_647)}.${Math.floor(Date.now() / 1000)}`,
     non_personalized_ads: true,
     ...(countryId ? { user_location: { country_id: countryId } } : {}),
-    events: [{ name, params: { ...params, engagement_time_msec: 1 } }],
+    // session_id and engagement time let the event show in the Realtime report too
+    events: [{ name, params: { ...params, session_id: String(Date.now()), engagement_time_msec: 1 } }],
   };
   const abort = new AbortController();
   const timer = setTimeout(() => abort.abort(), TIMEOUT_MS);
