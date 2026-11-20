@@ -13,7 +13,10 @@ export async function sendHbEvent(
 ): Promise<void> {
   const id = process.env.HB_GA_MEASUREMENT_ID;
   const secret = process.env.HB_GA_API_SECRET;
-  if (!id || !secret) return;
+  if (!id || !secret) {
+    console.warn("hb-measure: HB_GA_MEASUREMENT_ID / HB_GA_API_SECRET not configured");
+    return;
+  }
   const body = {
     client_id: `${Math.floor(Math.random() * 2_147_483_647)}.${Math.floor(Date.now() / 1000)}`,
     non_personalized_ads: true,
@@ -24,12 +27,14 @@ export async function sendHbEvent(
   const abort = new AbortController();
   const timer = setTimeout(() => abort.abort(), TIMEOUT_MS);
   try {
-    await fetch(
+    const res = await fetch(
       `${ENDPOINT}?measurement_id=${encodeURIComponent(id)}&api_secret=${encodeURIComponent(secret)}`,
       { method: "POST", body: JSON.stringify(body), signal: abort.signal, cache: "no-store" },
     );
-  } catch {
-    // counting must never break the page
+    if (!res.ok) console.warn(`hb-measure: ${name} answered HTTP ${res.status}`);
+  } catch (e) {
+    // counting must never break the page; the log says why it failed
+    console.warn(`hb-measure: ${name} not sent (${e instanceof Error ? e.name : "error"})`);
   } finally {
     clearTimeout(timer);
   }
