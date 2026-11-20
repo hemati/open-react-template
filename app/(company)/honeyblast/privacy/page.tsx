@@ -256,6 +256,17 @@ export default function HoneyBlastPrivacy() {
           After some games with a new best score, the game may show Google Play&apos;s rating card. Your rating and
           review are handled by Google Play; the game does not learn whether or how you rated.
         </p>
+        <p>
+          The game supports Google Play Games for achievements and a best-score leaderboard. You do not need it to
+          play. The game counts your progress on your device; if you have a Play Games profile, or create one when you
+          open the achievements or the leaderboard, the game sends your unlocked achievements and your best score to
+          Google Play Games at the end of a round. Google links them to your Play Games profile and, depending on your
+          Play Games settings, shows your profile name, avatar and score to other players on the leaderboard. Google
+          processes this data under its own responsibility (privacy policy: policies.google.com/privacy); we only see
+          the leaderboard and aggregated statistics in the Play Console. The legal basis is the performance of the
+          function you use (Art. 6(1)(b) GDPR). You can manage or delete your Play Games profile and its data in the
+          Google Play Games settings.
+        </p>
       </Section>
 
       <Section title="9. Device permissions">
