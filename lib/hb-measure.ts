@@ -32,6 +32,7 @@ export async function sendHbEvent(
       { method: "POST", body: JSON.stringify(body), signal: abort.signal, cache: "no-store" },
     );
     if (!res.ok) console.warn(`hb-measure: ${name} answered HTTP ${res.status}`);
+    else console.log(`hb-measure: ${name} sent (${res.status}, country ${countryId ?? "-"})`);
   } catch (e) {
     // counting must never break the page; the log says why it failed
     console.warn(`hb-measure: ${name} not sent (${e instanceof Error ? e.name : "error"})`);
