@@ -61,7 +61,7 @@ export default function HoneyBlastPrivacy() {
   return (
     <div style={style.container}>
       <h1 style={style.title}>Honey Blast Privacy Policy</h1>
-      <p>Last updated: 16 November 2026</p>
+      <p>Last updated: 20 November 2026</p>
 
       <p>
         This policy explains which personal data is processed when you use the Android game{' '}
@@ -212,7 +212,8 @@ export default function HoneyBlastPrivacy() {
           <strong>Google Analytics for Firebase.</strong> If you agree, the game sends usage statistics to Google: an
           app instance ID, device and operating system information (model, Android version, language, screen size),
           the app version, an approximate location derived from the IP address (country, region), and how the game is
-          used (for example first launch, sessions, engagement time and the ads shown). We use these statistics to
+          used (for example first launch, sessions, engagement time, the ads shown and, if you share the game, that
+          you shared it and which app you picked for it). We use these statistics to
           understand and improve the game and its advertising. Legal basis is your consent (Art. 6(1)(a) GDPR,
           § 25(1) TDDDG); without it, Analytics stores no identifier and sends no usage statistics that identify you
           (Google consent mode). You can withdraw your consent at any time via <strong>Settings → Privacy
@@ -227,7 +228,25 @@ export default function HoneyBlastPrivacy() {
         </p>
       </Section>
 
-      <Section title="7. Google Play">
+      <Section title="7. Sharing the game">
+        <p>
+          In the settings and after a new best score you can share Honey Blast with friends. The game then opens
+          Android&apos;s share menu with a short text and a link to our website appcoholic.com. Which app you use and
+          whom you send it to is up to you; the game does not learn who receives the message.
+        </p>
+        <p>
+          When someone opens such a link, our website counts the visit: the type of device (iPhone, Android or
+          computer), where in the game the link was shared from, and the country that our hosting provider derives from
+          the IP address of the request. A tap on &quot;I want it on iPhone&quot; on that page is counted the same way.
+          No cookies are set for this, and we neither store the IP address or any device identifier nor pass them on.
+          Our server sends the count to Google Analytics (Google Ireland Limited) as an anonymous event with a random
+          number that changes with every visit, so the visitor cannot be recognised. Visitors with an Android device are
+          then forwarded to Google Play. We use these counts to see whether sharing works and on which devices people
+          want the game, based on our legitimate interest (Art. 6(1)(f) GDPR).
+        </p>
+      </Section>
+
+      <Section title="8. Google Play">
         <p>
           The app is distributed through Google Play. Google processes data in connection with downloads, updates and,
           if you allow it in your device settings, crash and usage statistics, under its own responsibility. We receive
@@ -239,7 +258,7 @@ export default function HoneyBlastPrivacy() {
         </p>
       </Section>
 
-      <Section title="8. Device permissions">
+      <Section title="9. Device permissions">
         <ul style={style.list}>
           <li>
             <strong>Internet and network state</strong>: to load ads and the app configuration and to send usage
@@ -264,7 +283,7 @@ export default function HoneyBlastPrivacy() {
         </ul>
       </Section>
 
-      <Section title="9. Transfers outside the EU">
+      <Section title="10. Transfers outside the EU">
         <p>
           Google, Meta, Unity, InMobi, Mintegral and the ad exchanges named in section 4 may process data in the
           United States and other countries outside the EU. Where this happens, the providers rely on an adequacy decision of the European Commission, on the
@@ -272,21 +291,21 @@ export default function HoneyBlastPrivacy() {
         </p>
       </Section>
 
-      <Section title="10. Retention">
+      <Section title="11. Retention">
         <p>
           Data on your device is kept until you clear the app data or uninstall the app. The providers named above keep
           data according to their own privacy policies.
         </p>
       </Section>
 
-      <Section title="11. Children">
+      <Section title="12. Children">
         <p>
           Honey Blast is not directed at children under 13, and ads in the game are limited to content suitable for
           teens. If you believe a child has provided personal data, please contact us.
         </p>
       </Section>
 
-      <Section title="12. Your rights">
+      <Section title="13. Your rights">
         <p>
           Under the GDPR you have the right to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction
           of processing (Art. 18), data portability (Art. 20) and objection (Art. 21), and the right to withdraw consent
@@ -298,14 +317,14 @@ export default function HoneyBlastPrivacy() {
         </p>
       </Section>
 
-      <Section title="13. Changes to this policy">
+      <Section title="14. Changes to this policy">
         <p>
           We may update this policy when the app or the services it uses change. The current version is always
           available on this page.
         </p>
       </Section>
 
-      <Section title="14. Contact">
+      <Section title="15. Contact">
         <p>
           Questions about this policy or your data:{' '}
           <a style={style.link} href={`mailto:${CONTACT_EMAIL}`}>
