@@ -61,7 +61,7 @@ export default function HoneyBlastPrivacy() {
   return (
     <div style={style.container}>
       <h1 style={style.title}>Honey Blast Privacy Policy</h1>
-      <p>Last updated: 20 November 2026</p>
+      <p>Last updated: 22 November 2026</p>
 
       <p>
         This policy explains which personal data is processed when you use the Android game{' '}
@@ -105,8 +105,9 @@ export default function HoneyBlastPrivacy() {
             agree. You can change your choice at any time in the game.
           </li>
           <li>
-            With your consent, we measure how the game is used with Google Analytics for Firebase. If the game
-            crashes, a crash report is sent to Firebase Crashlytics so that we can fix the error.
+            With your consent, we measure how the game is used with Google Analytics for Firebase. Outside the EEA, the
+            United Kingdom and Switzerland, we also use these statistics to measure our own ads for the game on Google
+            Ads. If the game crashes, a crash report is sent to Firebase Crashlytics so that we can fix the error.
           </li>
           <li>
             If you allow notifications, the game reminds you now and then to play. These reminders are planned on your
@@ -219,6 +220,17 @@ export default function HoneyBlastPrivacy() {
           (Google consent mode). You can withdraw your consent at any time via <strong>Settings → Privacy
           settings</strong>. Where no consent is required by law, we rely on our legitimate interest in improving the
           game (Art. 6(1)(f) GDPR). Google keeps the event data for 2 months.
+        </p>
+        <p>
+          <strong>Measuring our own ads for the game.</strong> We advertise Honey Blast on Google Ads. Outside the EEA,
+          the United Kingdom and Switzerland, Google Analytics for Firebase also passes the usage statistics described
+          above, together with your advertising ID, to Google Ads (Google LLC). This lets us see which of our ads lead
+          to the game being opened and played (for example the first launch or a finished tutorial), and lets Google
+          Ads show ads for the game again to people who have played it before. In U.S. states with privacy laws, this
+          data is not used to personalise ads; only the measurement remains. We rely on our legitimate interest in
+          advertising the game effectively (Art. 6(1)(f) GDPR, where it applies). You can object at any time by
+          deleting your advertising ID or turning off ads personalisation in the Android settings (see section 5). In
+          the EEA, the United Kingdom and Switzerland this happens only if you agree in the consent form.
         </p>
         <p>
           <strong>Crashlytics.</strong> If the game crashes, a crash report is sent to Google: the error details (stack
