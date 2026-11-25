@@ -61,7 +61,7 @@ export default function HoneyBlastPrivacy() {
   return (
     <div style={style.container}>
       <h1 style={style.title}>Honey Blast Privacy Policy</h1>
-      <p>Last updated: 22 November 2026</p>
+      <p>Last updated: 25 November 2026</p>
 
       <p>
         This policy explains which personal data is processed when you use the Android game{' '}
@@ -108,6 +108,11 @@ export default function HoneyBlastPrivacy() {
             With your consent, we measure how the game is used with Google Analytics for Firebase. Outside the EEA, the
             United Kingdom and Switzerland, we also use these statistics to measure our own ads for the game on Google
             Ads. If the game crashes, a crash report is sent to Firebase Crashlytics so that we can fix the error.
+          </li>
+          <li>
+            Outside the EEA, the United Kingdom and Switzerland, the game records its own screen during the first session
+            after installing it (at most three minutes) and sends the recording to PostHog, so that we can see where new
+            players get stuck.
           </li>
           <li>
             If you allow notifications, the game reminds you now and then to play. These reminders are planned on your
@@ -195,7 +200,7 @@ export default function HoneyBlastPrivacy() {
         </p>
       </Section>
 
-      <Section title="6. Firebase (configuration, usage statistics, crash reports)">
+      <Section title="6. Firebase and PostHog (configuration, usage statistics, crash reports, screen recordings)">
         <p>
           The game uses the following services of Firebase, a platform of Google (Google Ireland Limited, Gordon House,
           Barrow Street, Dublin 4, Ireland).
@@ -237,6 +242,18 @@ export default function HoneyBlastPrivacy() {
           trace), device model, Android version, app version, free memory and storage, the time of the crash and a
           Crashlytics installation ID. We use these reports only to find and fix errors, based on our legitimate
           interest in a stable game (Art. 6(1)(f) GDPR). Crash reports are deleted after 90 days.
+        </p>
+        <p>
+          <strong>Screen recordings of the first session (PostHog).</strong> To find out where new players get stuck,
+          the game records its own screen during the first session after it is installed, for at most three minutes,
+          and only outside the EEA, the United Kingdom and Switzerland. The recording consists of pictures of the
+          game&apos;s screen (about one per second) and the places on the screen you touch; it does not include other
+          apps, notifications or system dialogs, and the game shows no personal data. It is sent to{' '}
+          <strong>PostHog</strong> (PostHog Inc.) together with a random recording ID, the device model, the Android
+          and app version and the IP address, which PostHog uses only to derive the country and does not store. The
+          recordings are stored on PostHog&apos;s servers in the EU and deleted after 30 days. We use them only to
+          improve the game, based on our legitimate interest (Art. 6(1)(f) GDPR, where it applies). More information:{' '}
+          <ExternalLink href="https://posthog.com/privacy">PostHog privacy policy</ExternalLink>.
         </p>
       </Section>
 
@@ -308,7 +325,7 @@ export default function HoneyBlastPrivacy() {
 
       <Section title="10. Transfers outside the EU">
         <p>
-          Google, Meta, Unity, InMobi, Mintegral and the ad exchanges named in section 4 may process data in the
+          Google, Meta, Unity, InMobi, Mintegral, PostHog and the ad exchanges named in section 4 may process data in the
           United States and other countries outside the EU. Where this happens, the providers rely on an adequacy decision of the European Commission, on the
           EU–U.S. Data Privacy Framework or on the European Commission&apos;s Standard Contractual Clauses.
         </p>
