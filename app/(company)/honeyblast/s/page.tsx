@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { classify, countryFrom, normalizeSource, playStoreUrl } from "@/lib/share-link";
+import {
+  classify,
+  countryFrom,
+  formatScore,
+  normalizeScore,
+  normalizeSource,
+  playStoreUrl,
+  shareImagePath,
+  sharePageUrl,
+  sharePreviewText,
+} from "@/lib/share-link";
 import { sendHbEvent } from "@/lib/hb-measure";
 import { InterestButton } from "./interest-button";
 
@@ -9,31 +19,36 @@ import { InterestButton } from "./interest-button";
 export const dynamic = "force-dynamic";
 
 const SITE = "https://appcoholic.com";
-const IMAGE = `${SITE}/images/honeyblast/feature-graphic.jpg`;
-const TITLE = "Honey Blast – Block Puzzle";
-const DESCRIPTION = "Can you beat my score? Play Honey Blast, a relaxing block puzzle.";
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  robots: { index: false, follow: false },
-  openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE}/honeyblast/s`,
-    siteName: "Appcoholic",
-    type: "website",
-    images: [{ url: IMAGE, width: 1024, height: 500, alt: "Honey Blast" }],
-  },
-  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [IMAGE] },
-};
+type Props = { searchParams: { src?: string | string[]; score?: string | string[] } };
 
-type Props = { searchParams: { src?: string | string[] } };
+/** The preview card: the sender's score as a challenge when the link carries one, else an invitation. */
+export function generateMetadata({ searchParams }: Props): Metadata {
+  const score = normalizeScore(searchParams.score);
+  const { title, description } = sharePreviewText(score);
+  const image = { url: `${SITE}${shareImagePath(score)}`, width: 1200, height: 630, alt: "Honey Blast" };
+  return {
+    title,
+    description,
+    robots: { index: false, follow: false },
+    openGraph: {
+      title,
+      description,
+      // the card links to the address it was made from, so a tap keeps the source and the score
+      url: sharePageUrl(SITE, normalizeSource(searchParams.src), score),
+      siteName: "Appcoholic",
+      type: "website",
+      images: [image],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [image.url] },
+  };
+}
 
 export default async function HoneyBlastShare({ searchParams }: Props) {
   const h = headers();
   const visitor = classify(h.get("user-agent"));
   const src = normalizeSource(searchParams.src);
+  const score = normalizeScore(searchParams.score);
   const play = playStoreUrl(src);
 
   if (visitor !== "bot") await sendHbEvent(`share_link_${visitor}`, { src }, countryFrom(h));
@@ -78,7 +93,9 @@ export default async function HoneyBlastShare({ searchParams }: Props) {
               />
               <h1 className="h3 mb-3 text-gray-100">Honey Blast</h1>
               <p className="mb-8 text-gray-400">
-                A friend sent you Honey Blast, a relaxing block puzzle. Can you beat their score?
+                {score === null
+                  ? "A friend sent you Honey Blast, a relaxing block puzzle. Can you beat their score?"
+                  : `A friend scored ${formatScore(score)} points in Honey Blast, a relaxing block puzzle. Can you beat that?`}
               </p>
               <a
                 className="btn w-full rounded-full bg-purple-600 py-3 text-white hover:bg-purple-700"

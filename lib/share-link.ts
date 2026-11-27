@@ -25,6 +25,39 @@ export function normalizeSource(src: string | string[] | null | undefined): Shar
   return s === "settings" || s === "best" ? s : "other";
 }
 
+/** The sender's score from the link (?score=12345): whole points, up to 9 digits; anything else counts as none. */
+export function normalizeScore(score: string | string[] | null | undefined): number | null {
+  const s = Array.isArray(score) ? score[0] : score;
+  if (!s || !/^\d{1,9}$/.test(s)) return null;
+  const n = Number(s);
+  return n > 0 ? n : null;
+}
+
+/** 12345 → "12,345" (the preview is in English). */
+export function formatScore(score: number): string {
+  return String(score).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+/** Title and text of the preview card a messenger shows under the link. */
+export function sharePreviewText(score: number | null): { title: string; description: string } {
+  return {
+    title: score === null ? "Play Honey Blast with me!" : `Can you beat my ${formatScore(score)} points?`,
+    description: "Honey Blast – a relaxing block puzzle. Free on Android.",
+  };
+}
+
+/** The share page's address with what it was opened with, so the preview card links back to the same page. */
+export function sharePageUrl(site: string, src: ShareSource, score: number | null): string {
+  const q = new URLSearchParams({ src });
+  if (score !== null) q.set("score", String(score));
+  return `${site}/honeyblast/s?${q}`;
+}
+
+/** The preview image: the score sits in the path, so the address alone decides the picture and caches safely. */
+export function shareImagePath(score: number | null): string {
+  return `/honeyblast/s/og/${score ?? 0}`;
+}
+
 /** Google Play with a referrer, so installs from shared links show up as source "share" in Analytics. */
 export function playStoreUrl(src: ShareSource): string {
   const referrer = `utm_source=share&utm_medium=app_share&utm_campaign=${src}`;
